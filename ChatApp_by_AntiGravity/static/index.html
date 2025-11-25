@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GapShap</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Landing / Mode Selection -->
+        <div id="landing-page" class="view active">
+            <div class="landing-content">
+                <h1>GapShap</h1>
+                <p>Experience the future of conversation.</p>
+                <div class="mode-cards">
+                    <div class="card" onclick="selectMode('ai')">
+                        <div class="icon">🤖</div>
+                        <h2>AI Companion</h2>
+                        <p>Chat with our advanced AI assistant.</p>
+                    </div>
+                    <div class="card" onclick="selectMode('human')">
+                        <div class="icon">👥</div>
+                        <h2>Human Connect</h2>
+                        <p>Real-time chat with other users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Interface -->
+        <div id="chat-page" class="view">
+            <header>
+                <button class="back-btn" onclick="goBack()">←</button>
+                <h2 id="chat-title">Chat</h2>
+                <div class="status-indicator" id="status-indicator"></div>
+            </header>
+            <div class="chat-area" id="chat-area">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
