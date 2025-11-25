@@ -12,7 +12,7 @@ class AIService:
             self.model = None
         else:
             genai.configure(api_key=api_key)
-            self.model = genai.GenerativeModel('gemini-2.0-pro')
+            self.model = genai.GenerativeModel('gemini-2.0-flash')
         
         # Store chat sessions: session_id -> chat_session object
         self.chat_sessions: Dict[str, any] = {}
@@ -32,3 +32,4 @@ class AIService:
         except Exception as e:
             print(f"Error communicating with Gemini: {e}")
             return "I'm having trouble thinking right now. Please try again later."
+
