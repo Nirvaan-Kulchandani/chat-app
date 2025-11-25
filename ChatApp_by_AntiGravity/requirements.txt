@@ -4,3 +4,5 @@ sqlalchemy
 google-generativeai
 python-dotenv
 websockets
+jinja2
+python-multipart
